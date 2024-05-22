@@ -1,10 +1,7 @@
 import http from 'node:http'
 
 import { json } from './middlewares/json.js';
-import { Database } from './database.js';
 import { routes } from './routes.js';
-
-const database = new Database();
 
 const server = http.createServer(async (request, response) => {
   const { method, url } = request
